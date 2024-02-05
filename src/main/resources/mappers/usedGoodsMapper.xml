@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- dtd : xml에서 사용된 태그를 정의한 문서 -->
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!-- 어떤 인터페이스랑 연결할지, namespace  속성 이용 -->
+ <mapper namespace="com.nyeong.spring.ex.database.repository.UsedGoodsRepository">
+ 	
+ 	<!-- 연결할 인터페이스 정보 -->
+ 	<!-- public List<UsedGoods> selectUsedGoodsList(); -->
+ 	<!-- id=메소드명 , resultType=리턴타입인데 경로를 표시해야함 -->
+ 	
+ 	<select id="selectUsedGoodsList" 
+ 	resultType="com.nyeong.spring.ex.database.domain.UsedGoods">
+ 		SELECT 
+ 			`id`
+ 			, `sellerId`
+ 			, `title`
+ 			, `price`
+ 			, `description`
+ 			, `image`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		FROM 
+ 			`used_goods`
+ 	</select>
+ </mapper>
