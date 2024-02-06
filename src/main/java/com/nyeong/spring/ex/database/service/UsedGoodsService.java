@@ -10,6 +10,7 @@ import com.nyeong.spring.ex.database.repository.UsedGoodsRepository;
 
 // 로직(buisness) 수행 담당
 // 기능 담당
+// service -> repository
 @Service
 public class UsedGoodsService {
 	
@@ -17,7 +18,6 @@ public class UsedGoodsService {
 	// 멤버변수먼저 생성
 	@Autowired
 	private UsedGoodsRepository usedGoodsRepository;
-	
 	// 중고물품 게시글 리스트
 	public List<UsedGoods> getUsedGoodsList() {
 		

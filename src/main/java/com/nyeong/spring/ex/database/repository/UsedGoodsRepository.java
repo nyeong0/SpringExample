@@ -9,6 +9,7 @@ import com.nyeong.spring.ex.database.domain.UsedGoods;
 // Mybatis framework
 // 데이터베이스 관련 기능 담당
 // 메소드 정의만 할 것
+// repository ->  UsedGoods Class 객체 생성 -> mapper.xml
 @Mapper
 public interface UsedGoodsRepository {
 	

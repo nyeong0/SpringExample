@@ -11,6 +11,7 @@ import com.nyeong.spring.ex.database.domain.UsedGoods;
 import com.nyeong.spring.ex.database.service.UsedGoodsService;
 
 // 컨트롤러는 request, response 처리 담당
+// controller -> service
 @Controller
 public class UsedGoodsController {
 	
