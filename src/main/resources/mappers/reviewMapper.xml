@@ -20,4 +20,46 @@
 		WHERE
 			`id` = #{id}
 	</select>
+	
+	<!-- insert는 리턴타입 int로 고정되어있음 작성X  -->
+	<insert id="insertReview" parameterType="map">
+		INSERT INTO 
+			`new_review`
+			(
+				`storeId`
+				,`menu`
+				,`userName`
+				,`point`
+				,`review`
+			)
+		VALUE
+			(
+				#{storeId}
+				,#{menu}
+				,#{userName}
+				,#{point}
+				,#{review}
+			)
+	</insert>
+	
+	<insert id="insertReviewByObject" parameterType="com.nyeong.spring.ex.mybatis.domain.Review">
+				INSERT INTO 
+			`new_review`
+			(
+				`storeId`
+				,`menu`
+				,`userName`
+				,`point`
+				,`review`
+			)
+		VALUE
+			(<!-- 클래스의 멤버변수 -->
+				#{storeId}
+				,#{menu}
+				,#{userName}
+				,#{point}
+				,#{review}
+			)
+		
+	</insert>
 </mapper>
