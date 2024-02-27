@@ -11,7 +11,7 @@ public interface ReviewRepository {
 	// '파라미터id'인 행 조회 리턴
 	public Review selectReview(@Param("id") int id);
 	
-	// 수행된 행의 개수가 리턴 됨
+	// insert 수행된 행의 개수가 리턴 됨
 	public int insertReview(
 			@Param("storeId") int storeId
 			, @Param("menu") String menu
